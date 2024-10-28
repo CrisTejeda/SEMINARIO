@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.kioscoapp.view.MainViewController"
+      spacing="10"
+      stylesheets="/styles/main.css">
+
+    <!-- Banner superior -->
+    <HBox styleClass="top-banner">
+        <Label fx:id="lblUsuarioActual" text="Bienvenido: " styleClass="welcome-label"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="btnCerrarSesion" text="Cerrar Sesión" styleClass="logout-button"
+                onAction="#handleCerrarSesion"/>
+    </HBox>
+
+    <!-- Panel principal de botones -->
+    <GridPane alignment="CENTER" hgap="20" vgap="20">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <!-- Botón de Ventas -->
+        <Button fx:id="btnVentas" styleClass="menu-button" onAction="#handleVentas"
+                GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <graphic>
+                <VBox alignment="CENTER" spacing="10">
+                    <ImageView fitHeight="64" fitWidth="64" preserveRatio="true">
+                        <Image url="@/icons/ventas.png"/>
+                    </ImageView>
+                    <Label text="Ventas"/>
+                </VBox>
+            </graphic>
+        </Button>
+
+        <!-- Botón de Inventario -->
+        <Button fx:id="btnInventario" styleClass="menu-button" onAction="#handleInventario"
+                GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <graphic>
+                <VBox alignment="CENTER" spacing="10">
+                    <ImageView fitHeight="64" fitWidth="64" preserveRatio="true">
+                        <Image url="@/icons/inventario.png"/>
+                    </ImageView>
+                    <Label text="Inventario"/>
+                </VBox>
+            </graphic>
+        </Button>
+
+        <!-- Botón de Usuarios -->
+        <Button fx:id="btnUsuarios" styleClass="menu-button" onAction="#handleUsuarios"
+                GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <graphic>
+                <VBox alignment="CENTER" spacing="10">
+                    <ImageView fitHeight="64" fitWidth="64" preserveRatio="true">
+                        <Image url="@/icons/usuarios.png"/>
+                    </ImageView>
+                    <Label text="Usuarios"/>
+                </VBox>
+            </graphic>
+        </Button>
+
+        <!-- Botón de Reportes -->
+        <Button fx:id="btnReportes" styleClass="menu-button" onAction="#handleReportes"
+                GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <graphic>
+                <VBox alignment="CENTER" spacing="10">
+                    <ImageView fitHeight="64" fitWidth="64" preserveRatio="true">
+                        <Image url="@/icons/reportes.png"/>
+                    </ImageView>
+                    <Label text="Reportes"/>
+                </VBox>
+            </graphic>
+        </Button>
+    </GridPane>
+</VBox>

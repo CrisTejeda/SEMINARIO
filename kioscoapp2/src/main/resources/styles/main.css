@@ -1,0 +1,166 @@
+package com.kioscoapp;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import com.kioscoapp.config.DatabaseConnection;
+import com.kioscoapp.view.LoginView;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
+import javafx.scene.image.ImageView;
+
+public class Main extends Application {
+    private Stage primaryStage;
+    private Scene scene;
+    private String currentUser = "";
+
+    @Override
+    public void start(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+        initializeApp();
+    }
+
+    private void initializeApp() {
+        try {
+            // Inicializar la conexión a la base de datos
+            DatabaseConnection.getInstance();
+
+            // Crear la vista principal
+            VBox root = new VBox();
+
+            // Crear el banner superior
+            HBox topBanner = createTopBanner();
+            topBanner.getStyleClass().add("top-banner");
+
+            // Crear el contenido principal
+            VBox mainContent = createMainContent();
+            VBox.setVgrow(mainContent, Priority.ALWAYS);
+
+            root.getChildren().addAll(topBanner, mainContent);
+
+            // Configurar la escena
+            scene = new Scene(root, 1024, 768);
+            scene.getStylesheets().add(getClass().getResource("/styles/main.css").toExternalForm());
+
+            // Configurar el stage
+            primaryStage.setTitle("Kiosco App");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private HBox createTopBanner() {
+        HBox banner = new HBox();
+        banner.setAlignment(Pos.CENTER_LEFT);
+
+        Label welcomeLabel = new Label("Bienvenido " + currentUser);
+        welcomeLabel.getStyleClass().add("welcome-label");
+
+        Region spacer = new Region();
+        HBox.setHgrow(spacer, Priority.ALWAYS);
+
+        Button logoutButton = new Button("Cerrar Sesión");
+        logoutButton.getStyleClass().add("logout-button");
+        logoutButton.setOnAction(e -> handleLogout());
+
+        banner.getChildren().addAll(welcomeLabel, spacer, logoutButton);
+        return banner;
+    }
+
+    private VBox createMainContent() {
+        VBox content = new VBox(20);
+        content.setAlignment(Pos.CENTER);
+        content.setPadding(new Insets(20));
+
+        // Crear grid de botones para el menú principal
+        HBox menuRow1 = new HBox(20);
+        menuRow1.setAlignment(Pos.CENTER);
+
+        Button ventasButton = createMenuButton("Ventas", "/icons/ventas.png");
+        Button inventarioButton = createMenuButton("Inventario", "/icons/inventario.png");
+        Button clientesButton = createMenuButton("Clientes", "/icons/clientes.png");
+
+        menuRow1.getChildren().addAll(ventasButton, inventarioButton, clientesButton);
+
+        HBox menuRow2 = new HBox(20);
+        menuRow2.setAlignment(Pos.CENTER);
+
+        Button reportesButton = createMenuButton("Reportes", "/icons/reportes.png");
+        Button usuariosButton = createMenuButton("Usuarios", "/icons/usuarios.png");
+        Button configButton = createMenuButton("Configuración", "/icons/config.png");
+
+        menuRow2.getChildren().addAll(reportesButton, usuariosButton, configButton);
+
+        content.getChildren().addAll(menuRow1, menuRow2);
+        return content;
+    }
+
+    private Button createMenuButton(String text, String iconPath) {
+        Button button = new Button(text);
+        button.getStyleClass().add("menu-button");
+
+        // Intenta cargar el ícono si existe
+        try {
+            ImageView icon = new ImageView(getClass().getResource(iconPath).toExternalForm());
+            icon.setFitHeight(64);
+            icon.setFitWidth(64);
+            button.setGraphic(icon);
+        } catch (Exception e) {
+            // Si no se encuentra el ícono, continúa sin él
+            System.out.println("Ícono no encontrado para: " + text);
+        }
+
+        button.setOnAction(e -> handleMenuButton(text));
+        return button;
+    }
+
+    private void handleMenuButton(String menuOption) {
+        switch (menuOption) {
+            case "Ventas":
+                // Implementar navegación a Ventas
+                System.out.println("Navegando a Ventas...");
+                break;
+            case "Inventario":
+                // Implementar navegación a Inventario
+                System.out.println("Navegando a Inventario...");
+                break;
+            case "Clientes":
+                // Implementar navegación a Clientes
+                System.out.println("Navegando a Clientes...");
+                break;
+            case "Reportes":
+                // Implementar navegación a Reportes
+                System.out.println("Navegando a Reportes...");
+                break;
+            case "Usuarios":
+                // Implementar navegación a Usuarios
+                System.out.println("Navegando a Usuarios...");
+                break;
+            case "Configuración":
+                // Implementar navegación a Configuración
+                System.out.println("Navegando a Configuración...");
+                break;
+        }
+    }
+
+    private void handleLogout() {
+        // Implementar lógica de cierre de sesión
+        LoginView loginView = new LoginView();
+        Scene loginScene = new Scene(loginView.getView(), 400, 300);
+        loginScene.getStylesheets().add(getClass().getResource("/styles/main.css").toExternalForm());
+        primaryStage.setScene(loginScene);
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
