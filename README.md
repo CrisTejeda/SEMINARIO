@@ -1,73 +1,90 @@
-🏪 Sistema de Ventas - Gestión Comercial
-⭐ Descripción
+##🏪 Sistema de Ventas - Gestión Comercial
+
+###⭐ Descripción
 Sistema de Ventas es una aplicación desarrollada en Java que permite la gestión integral de operaciones comerciales, incluyendo el manejo de ventas, productos, clientes y usuarios. Utiliza una arquitectura basada en el patrón MVC (Modelo-Vista-Controlador) con una robusta gestión de datos en MySQL para garantizar la integridad y eficiencia de las operaciones comerciales.
-🚀 Características
 
-👥 Gestión de Usuarios:
+###🚀 Características
 
-Registro y administración de usuarios del sistema
-Control de acceso con usuario y contraseña
-Gestión de estados de usuarios
-Almacenamiento seguro de información personal
+###👥 Gestión de Usuarios:
 
-
-🧑‍💼 Gestión de Clientes:
-
-Registro completo de información de clientes
-Seguimiento de DNI, teléfono y dirección
-Sistema de estado para clientes activos/inactivos
+- Registro y administración de usuarios del sistema
+- Control de acceso con usuario y contraseña
+- Gestión de estados de usuarios
+- Almacenamiento seguro de información personal
 
 
-📦 Gestión de Productos:
+###🧑‍💼 Gestión de Clientes:
 
-Control de inventario
-Gestión de precios y cantidades
-Categorización de productos
-Cálculo automático de IVA
-Descripción detallada de productos
+- Registro completo de información de clientes
+- Seguimiento de DNI, teléfono y dirección
+- Sistema de estado para clientes activos/inactivos
 
 
-🛍️ Gestión de Ventas:
+###📦 Gestión de Productos:
 
-Registro detallado de transacciones
-Cálculo automático de subtotales y totales
-Sistema de descuentos
-Cálculo de IVA por producto
-Registro de fecha de venta
-Histórico de ventas por cliente
-
-
-📊 Categorización:
-
-Sistema de categorías para productos
-Organización eficiente del inventario
+- Control de inventario
+- Gestión de precios y cantidades
+- Categorización de productos
+- Cálculo automático de IVA
+- Descripción detallada de productos
 
 
+###🛍️ Gestión de Ventas:
 
-🛠️ Tecnologías Utilizadas
+- Registro detallado de transacciones
+- Cálculo automático de subtotales y totales
+- Sistema de descuentos
+- Cálculo de IVA por producto
+- Registro de fecha de venta
+- Histórico de ventas por cliente
 
-Base de Datos: MySQL
-Lenguaje de Programación: Java
-Estructura de Base de Datos: Mysql WorkBench
 
-6 tablas relacionales
-Claves primarias y foráneas
-Campos optimizados por tipo de dato
+###📊 Categorización:
+
+- Sistema de categorías para productos
+- Organización eficiente del inventario
 
 
 
-📋 Estructura de la Base de Datos
-sql├── tb_usuario (Gestión de Usuarios)
+###🛠️ Tecnologías Utilizadas
+- IDE: NetBeans
+- Base de Datos: MySQL
+- Herramienta de Diseño de Base de Datos: MySQL Workbench
+- Lenguaje de Programación: Java
+- Conexión a la Base de Datos: Conector Java para MySQL (JDBC)
+- Estructura de Base de Datos: 6 tablas relacionales
+- Características de la Base de Datos: Claves primarias y foráneas, campos optimizados por tipo de dato
+
+
+
+###📋 Estructura de la Base de Datos
+
+```html
+sql
+├── tb_usuario (Gestión de Usuarios)
 ├── tb_cliente (Información de Clientes)
 ├── tb_categoria (Categorías de Productos)
 ├── tb_producto (Inventario de Productos)
 ├── tb_cabecera_venta (Registro Principal de Ventas)
 └── tb_detalle_venta (Detalles de Cada Venta)
+```
+###🎥 Video Demostrativo
+[Links]()
 
-🎥 Demo
-Proximamente
+###💻 Requisitos del Sistema
 
+- MySQL 5.7 o superior
+- Java JDK 8 o superior
+- Mínimo 4GB de RAM
+- Espacio en disco: 500MB
 
-👥 Usuario por Defecto
-Usuario: pgarcia
+###⚙️ Instalación
+
+- Clonar el repositorio
+- Ejecutar el script SQL BD Sistema de Ventas.sql
+- Configurar las credenciales de la base de datos
+- Compilar y ejecutar la aplicación Java
+
+###👥 Usuarios Registrados
+CopyUsuario: pgarcia
 Contraseña: 12345
