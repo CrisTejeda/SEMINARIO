@@ -1,11 +1,11 @@
-##🏪 Sistema de Ventas - Gestión Comercial
+## 🏪 Sistema de Ventas - Gestión Comercial
 
-###⭐ Descripción
+### ⭐ Descripción
 Sistema de Ventas es una aplicación desarrollada en Java que permite la gestión integral de operaciones comerciales, incluyendo el manejo de ventas, productos, clientes y usuarios. Utiliza una arquitectura basada en el patrón MVC (Modelo-Vista-Controlador) con una robusta gestión de datos en MySQL para garantizar la integridad y eficiencia de las operaciones comerciales.
 
-###🚀 Características
+### 🚀 Características
 
-###👥 Gestión de Usuarios:
+### 👥 Gestión de Usuarios:
 
 - Registro y administración de usuarios del sistema
 - Control de acceso con usuario y contraseña
@@ -13,14 +13,14 @@ Sistema de Ventas es una aplicación desarrollada en Java que permite la gestió
 - Almacenamiento seguro de información personal
 
 
-###🧑‍💼 Gestión de Clientes:
+### 🧑‍💼 Gestión de Clientes:
 
 - Registro completo de información de clientes
 - Seguimiento de DNI, teléfono y dirección
 - Sistema de estado para clientes activos/inactivos
 
 
-###📦 Gestión de Productos:
+### 📦 Gestión de Productos:
 
 - Control de inventario
 - Gestión de precios y cantidades
@@ -29,7 +29,7 @@ Sistema de Ventas es una aplicación desarrollada en Java que permite la gestió
 - Descripción detallada de productos
 
 
-###🛍️ Gestión de Ventas:
+### 🛍️ Gestión de Ventas:
 
 - Registro detallado de transacciones
 - Cálculo automático de subtotales y totales
@@ -39,14 +39,14 @@ Sistema de Ventas es una aplicación desarrollada en Java que permite la gestió
 - Histórico de ventas por cliente
 
 
-###📊 Categorización:
+### 📊 Categorización:
 
 - Sistema de categorías para productos
 - Organización eficiente del inventario
 
 
 
-###🛠️ Tecnologías Utilizadas
+### 🛠️ Tecnologías Utilizadas
 - IDE: NetBeans
 - Base de Datos: MySQL
 - Herramienta de Diseño de Base de Datos: MySQL Workbench
@@ -57,7 +57,7 @@ Sistema de Ventas es una aplicación desarrollada en Java que permite la gestió
 
 
 
-###📋 Estructura de la Base de Datos
+### 📋 Estructura de la Base de Datos
 
 ```html
 sql
@@ -68,23 +68,23 @@ sql
 ├── tb_cabecera_venta (Registro Principal de Ventas)
 └── tb_detalle_venta (Detalles de Cada Venta)
 ```
-###🎥 Video Demostrativo
+### 🎥 Video Demostrativo
 [Links]()
 
-###💻 Requisitos del Sistema
+### 💻 Requisitos del Sistema
 
 - MySQL 5.7 o superior
 - Java JDK 8 o superior
 - Mínimo 4GB de RAM
 - Espacio en disco: 500MB
 
-###⚙️ Instalación
+### ⚙️ Instalación
 
 - Clonar el repositorio
 - Ejecutar el script SQL BD Sistema de Ventas.sql
 - Configurar las credenciales de la base de datos
 - Compilar y ejecutar la aplicación Java
 
-###👥 Usuarios Registrados
+### 👥 Usuarios Registrados
 CopyUsuario: pgarcia
 Contraseña: 12345
