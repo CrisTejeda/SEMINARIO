@@ -87,9 +87,9 @@ sql
 
 ### 👥 Usuarios Registrados
 
-| Nombres  | Apellidos  | Usuarios | Contraseña | Telefono | 
-| :------------ |:---------------:| -----:|
-| Pedro | Garcia | pgarcia | 12345 | 1123456789 |
-| Mariana | Lopez | mlopez | abc123 | 1134567890 |
-| Carlos | Martínez | cmartinez | pass456 | 1145678901 |
-| Laura | Fernández | lfernandez | laura789 | 1156789012 |
+ | Nombres  | Apellidos  | Usuarios | Contraseña | Telefono | 
+ | :------------ |:---------------:| -----:|
+ | Pedro | Garcia | pgarcia | 12345 | 1123456789 |
+ | Mariana | Lopez | mlopez | abc123 | 1134567890 |
+ | Carlos | Martínez | cmartinez | pass456 | 1145678901 |
+ | Laura | Fernández | lfernandez | laura789 | 1156789012 |
