@@ -72,7 +72,7 @@ Base de datos: `bd_sistema_ventas_electrocentro`, con 6 tablas relacionales, cla
 ```
 
 ## 🎥 Video Demostrativo
-
+https://youtu.be/ZaobvXoAp24
 
 ## 💻 Requisitos del Sistema
 - MySQL 5.7 o superior
